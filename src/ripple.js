@@ -1,5 +1,8 @@
 var Ripple = {
     bind: function(el, binding){
+        if (binding.hasOwnProperty('value') && binding.value === false) {
+            return;
+        }
 
         // Default values.
         var props = {
